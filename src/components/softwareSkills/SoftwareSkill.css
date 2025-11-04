@@ -13,6 +13,9 @@
   margin-bottom: 20px;
   font-family: "Google Sans Regular";
 }
+.software-skill-inline > i::after {
+  display: none !important;
+}
 
 .software-skill-inline > i {
   color: #868e96;
@@ -25,3 +28,5 @@
 .skill-image {
   height: 48px;
 }
+
+

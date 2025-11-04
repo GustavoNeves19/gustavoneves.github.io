@@ -29,12 +29,15 @@ class Education extends Component {
               </div>
               <div className="heading-text-div">
                 <h1 className="heading-text" style={{ color: theme.text }}>
-                  Education
+                  Educação
                 </h1>
                 <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Basic Qualification and Certifcations
+                  Qualificações Acadêmicas e certificados
                 </h3>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
+                <h3 className="heading-sub-text-h4" style={{ color: theme.text }}>
+                  Um resumo sobre graduações, cursos e workshops.
+                </h3>
+                
               </div>
             </div>
           </Fade>

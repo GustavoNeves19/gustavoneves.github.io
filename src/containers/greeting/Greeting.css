@@ -4,27 +4,27 @@
   margin: 0px auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
-}
-
-.gretting-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  margin-top: 5rem;
 }
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .greeting-main > * {
   flex: 1;
   margin-bottom: 30px;
 }
+
 .button-greeting-div {
   display: flex;
   margin-top: 20px;
@@ -50,41 +50,64 @@
   font-family: "Google Sans Medium";
 }
 
-.greeting-image-div > * {
-  max-width: 100%;
-  height: auto;
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-/* Media Query */
+.greeting-image {
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.greeting-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsividade */
 @media (max-width: 1380px) {
   .greeting-text {
     font-size: 50px;
   }
   .greeting-text-p {
     font-size: 20px;
+    margin-right: 20px;
   }
 }
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .greeting-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
   .greeting-text {
     font-size: 30px;
     margin-top: 0px;
-    text-align: center;
   }
+
   .greeting-nickname {
     font-size: 25px;
-    text-align: center;
   }
+
   .greeting-text-p {
     font-size: 16px;
     margin-right: 0px;
     line-height: normal;
-    text-align: center;
   }
-  .greeting-main {
-    display: block;
+
+  .greeting-image {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .button-greeting-div {
+    justify-content: space-around;
   }
 
   .portfolio-repo-btn-div {

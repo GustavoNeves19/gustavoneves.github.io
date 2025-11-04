@@ -2,7 +2,7 @@
 
 .header {
   display: block;
-  max-width: 90%;
+  max-width: 95%;
   padding: 20px 10px;
   margin: 0px auto;
 }
@@ -20,8 +20,9 @@
 
 .header li a {
   display: block;
-  padding: 20px 20px;
+  padding: 24px 20px;
   /* color: black; */
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -33,7 +34,7 @@
 .header .logo {
   display: block;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.9em;
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
@@ -41,7 +42,10 @@
 .header .logo-name {
   font-family: "Agustina Regular";
   font-weight: bold;
-  padding: 0 10px;
+  padding: 0 20px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;        /* melhora o espaçamento entre letras */
+  white-space: nowrap;
   /* color: #55198b; */
 }
 
@@ -123,9 +127,9 @@
   top: 0;
 }
 
-/* 48em = 768px */
+/* 1132px = ponto de quebra ideal para mostrar o menu hamburguer */
 
-@media (min-width: 48em) {
+@media (min-width: 1211px) {
   .header li {
     float: left;
   }
@@ -141,7 +145,10 @@
     display: none;
   }
 }
-@media (max-width: 960px) and (min-width: 768px) {
+
+/* Faixa intermediária: ajustar fonte em telas médias */
+
+@media (max-width: 960px) and (min-width: 1210px) {
   .header {
     font-size: 12px;
   }

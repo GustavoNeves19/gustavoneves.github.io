@@ -1,123 +1,70 @@
 {
   "data": [
     {
-      "id": "R_kgDOJWL0-g",
-      "name": "mdp-diffusion",
-      "createdAt": "2023-04-13T04:18:19Z",
-      "url": "https://github.com/ashutosh1919/mdp-diffusion",
-      "description": "Text-guided image editing by manipulating diffusion path without any training.",
+      "id": "R_kgDOQE6jNg",
+      "name": "LYRA",
+      "createdAt": "2025-10-18T16:47:25Z",
+      "url": "https://github.com/GustavoNeves19/LYRA",
+      "description": "LYRA é um sistema de Inteligência Artificial que atua como um agente autônomo para análise estatística avançada. Utiliza modelos generativos (Gemini) para interpretar regressões complexas, ANOVA e superfícies de desejabilidade, gerando relatórios técnicos explicativos de forma automatizada.",
       "isFork": false,
       "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        },
-        {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
-        },
-        {
-          "name": "Jupyter Notebook",
-          "iconifyClass": "logos-jupyter"
-        }
+        { "name": "Python", "iconifyClass": "logos-python", "variant": "ds", "size": 60 },
+        { "name": "LangChain", "iconifyClass": "simple-icons:langchain", "variant": "ds", "size": 50 },
+        { "name": "SciPy", "iconifyClass": "simple-icons:scipy", "variant": "ds", "size": 50 },
+        { "name": "Gemini", "iconifyClass": "simple-icons:googlebard", "variant": "ds", "size": 50 }
       ]
     },
     {
-      "id": "R_kgDOG_vYHA",
-      "name": "explainable-cnn",
-      "createdAt": "2022-03-13T20:41:33Z",
-      "url": "https://github.com/ashutosh1919/explainable-cnn",
-      "description": "📦 PyTorch based visualization package for generating layer-wise explanations for CNNs.",
+      "id": "R_kgDOMinloA",
+      "name": "Ciencia-Dados",
+      "createdAt": "2024-08-12T18:38:49Z",
+      "url": "https://github.com/GustavoNeves19/Ciencia-Dados",
+      "description": "Repositório voltado ao aprendizado e aplicação de técnicas de Ciência de Dados. Inclui experimentos com TensorFlow e Keras para aprendizado profundo, além de modelos supervisionados com Scikit-learn e manipulação de dados em Pandas.",
       "isFork": false,
       "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
+        { "name": "Python", "iconifyClass": "logos-python", "variant": "ds", "size": 60 },
+        { "name": "TensorFlow", "iconifyClass": "logos-tensorflow", "variant": "ds", "size": 50 },
+        { "name": "Keras", "iconifyClass": "simple-icons:keras", "variant": "ds", "size": 50 },
+        { "name": "Scikit-learn", "iconifyClass": "simple-icons:scikitlearn", "variant": "ds", "size": 50 },
+        { "name": "Pandas", "iconifyClass": "simple-icons:pandas", "variant": "ds", "size": 50 }
       ]
     },
     {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
-      "name": "masterPortfolio",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "url": "https://github.com/ashutosh1919/masterPortfolio",
-      "description": "🔥 The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer.",
+      "id": "R_kgDOOi3XIA",
+      "name": "Pracaxi-Desejabilidade",
+      "createdAt": "2025-05-01T13:11:21Z",
+      "url": "https://github.com/GustavoNeves19/Pracaxi-Desejabilidade",
+      "description": "Projeto de otimização experimental aplicado à extração de compostos bioativos do Pracaxi. Utiliza modelagem polinomial e análise de desejabilidade para determinar as melhores condições experimentais com suporte estatístico robusto.",
       "isFork": false,
       "languages": [
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "Dockerfile",
-          "iconifyClass": "simple-icons:docker"
-        }
+        { "name": "Python", "iconifyClass": "logos-python", "variant": "ds", "size": 60 },
+        { "name": "Jupyter Notebook", "iconifyClass": "logos-jupyter", "variant": "ds", "size": 60 }
       ]
     },
     {
-      "id": "R_kgDOG0_8uQ",
-      "name": "react-awesome-shapes",
-      "createdAt": "2022-02-11T14:50:20Z",
-      "url": "https://github.com/ashutosh1919/react-awesome-shapes",
-      "description": "🌀 Insert Awesome Shapes into Your React Site with Ease.",
+      "id": "R_kgDOMzdCwg",
+      "name": "Compass-UOL",
+      "createdAt": "2024-09-18T11:11:03Z",
+      "url": "https://github.com/GustavoNeves19/Compass-UOL",
+      "description": "Repositório voltado às atividades e desafios desenvolvidos para a Compass UOL, com foco em automação de ambientes, containers Docker e scripts de apoio a pipelines de dados.",
       "isFork": false,
       "languages": [
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
-        },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        }
+        { "name": "Shell", "iconifyClass": "simple-icons:shell", "variant": "default", "size": 36 },
+        { "name": "Jupyter Notebook", "iconifyClass": "logos-jupyter", "variant": "ds", "size": 60 },
+        { "name": "Dockerfile", "iconifyClass": "simple-icons:docker", "variant": "default", "size": 36 },
+        { "name": "Python", "iconifyClass": "logos-python", "variant": "ds", "size": 60 },
+        { "name": "HTML", "iconifyClass": "logos-html-5", "variant": "default", "size": 36 }
       ]
     },
     {
-      "id": "R_kgDOGcPKSQ",
-      "name": "neuro-symbolic-sudoku-solver",
-      "createdAt": "2021-11-26T17:56:07Z",
-      "url": "https://github.com/ashutosh1919/neuro-symbolic-sudoku-solver",
-      "description": "⚙️ Solving sudoku using Deep Reinforcement learning in combination with powerful symbolic representations.",
+      "id": "R_kgDOPd6w9A",
+      "name": "Reddit-Scraping",
+      "createdAt": "2025-08-14T13:17:15Z",
+      "url": "https://github.com/GustavoNeves19/Reddit-Scraping",
+      "description": "Ferramenta para extração automatizada de dados do Reddit. Realiza coleta, limpeza e análise textual de postagens, sendo uma base para estudos de Processamento de Linguagem Natural (PLN) e análise de sentimentos.",
       "isFork": false,
       "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkzMjU5NDM1MTE=",
-      "name": "react-liquidswipe",
-      "createdAt": "2021-01-01T08:31:51Z",
-      "url": "https://github.com/ashutosh1919/react-liquidswipe",
-      "description": "🚀 Smooth Liquid Swipe Animation to transition between different components.",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        }
+        { "name": "Python", "iconifyClass": "logos-python", "variant": "ds", "size": 60 }
       ]
     }
   ]

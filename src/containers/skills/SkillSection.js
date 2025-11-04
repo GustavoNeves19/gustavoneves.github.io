@@ -7,6 +7,7 @@ import DataScienceImg from "./DataScienceImg";
 import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
 import DesignImg from "./DesignImg";
+import GenerativeAIImg from "./GenerativeAIImg"; // <-- ADICIONE ISTO
 
 function GetSkillSvg(props) {
   if (props.fileName === "DataScienceImg")
@@ -15,6 +16,8 @@ function GetSkillSvg(props) {
     return <FullStackImg theme={props.theme} />;
   else if (props.fileName === "CloudInfraImg")
     return <CloudInfraImg theme={props.theme} />;
+  else if (props.fileName === "GenerativeAIImg")
+    return <GenerativeAIImg theme={props.theme} />; // <-- RENDERIZE O COMPONENTE
   return <DesignImg theme={props.theme} />;
 }
 
@@ -28,10 +31,6 @@ class SkillSection extends Component {
             <div key={i} className="skills-main-div">
               <Fade left duration={2000}>
                 <div className="skills-image-div">
-                  {/* <img
-                    alt="Ashutosh is Analysing Data"
-                    src={require(`../../assets/images/${skill.imagePath}`)}
-                  ></img> */}
                   <GetSkillSvg fileName={skill.fileName} theme={theme} />
                 </div>
               </Fade>
@@ -47,17 +46,15 @@ class SkillSection extends Component {
                 </Fade>
                 <Fade right duration={2000}>
                   <div>
-                    {skill.skills.map((skillSentence, i) => {
-                      return (
-                        <p
-                          key={i}
-                          className="subTitle skills-text"
-                          style={{ color: theme.secondaryText }}
-                        >
-                          {skillSentence}
-                        </p>
-                      );
-                    })}
+                    {skill.skills.map((skillSentence, i) => (
+                      <p
+                        key={i}
+                        className="subTitle skills-text"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        {skillSentence}
+                      </p>
+                    ))}
                   </div>
                 </Fade>
               </div>
