@@ -1,15 +1,22 @@
-
 name: Node.js CI
 
 on:
   push:
-    branches:  
+    branches:
     - master
     - releases/*
   pull_request:
     branches:
     - master
     - releases/*
+  # Adiciona a capacidade de rodar o workflow manualmente
+  workflow_dispatch:
+
+# Define permissões necessárias para o deploy
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -22,12 +29,43 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+        
+    - name: Instalar Dependências
+      run: npm ci
+      
+    - name: Construir Projeto (npm run build)
+      # Este comando executa seu script de build, que gera o conteúdo estático na pasta /public
+      run: npm run build --if-present 
+      
+    - name: Rodar Testes
+      run: npm test
       env:
         CI: true
+
+    # --- PASSO 1: FAZER UPLOAD DOS ARQUIVOS CONSTRUÍDOS (PASTA 'PUBLIC') ---
+    - name: Upload artifact (Publicar pasta 'public')
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Define a pasta que será o site final. ESSA É A CORREÇÃO PRINCIPAL.
+        path: 'public'
+    
+  # --- PASSO 2: IMPLANTAR O ARTEFATO NO GITHUB PAGES ---
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    # Garante que o deploy só rode após o build ser bem-sucedido
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          # O deploy action pega o artefato que foi feito upload na etapa 'build'
+          token: ${{ github.token }}
