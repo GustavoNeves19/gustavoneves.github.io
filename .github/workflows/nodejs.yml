@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         # Define a pasta que será o site final. ESSA É A CORREÇÃO PRINCIPAL.
-        path: 'public'
+        path: 'build'
     
   # --- PASSO 2: IMPLANTAR O ARTEFATO NO GITHUB PAGES ---
   deploy:
