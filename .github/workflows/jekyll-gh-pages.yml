@@ -1,0 +1,49 @@
+# Este workflow foi modificado para publicar o conteúdo estático da pasta 'public'
+# e ignora completamente o Jekyll.
+name: Implantação de Página Estática (Ignora Jekyll)
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Job de Construção
+  # Este Job é responsável por fazer o upload dos arquivos estáticos.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      # --- PASSO CORRIGIDO: Upload do Conteúdo ---
+      - name: Upload artifact (Pasta Public)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Define a pasta que será publicada. É AQUI QUE APONTAMOS PARA 'PUBLIC'.
+          path: 'public'
+          
+  # Job de Implantação
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
